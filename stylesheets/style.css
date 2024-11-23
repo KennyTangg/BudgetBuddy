@@ -252,7 +252,7 @@ body{
     rgba(0, 0, 0, 0.2), 
     rgba(0, 0, 0, 0.6),
     rgba(0, 0, 0, 0.1)),
-    url(/images/hero_background.avif);
+    url(images/hero_background.avif);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
