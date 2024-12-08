@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <link rel="stylesheet" href="stylesheets/transactions.css">
+    <!-- Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+    <title> Personal Finance Tracker - Transactions</title>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar Section -->
+        <aside>
+            <div class="toggle">
+                <div class="logo">
+                    <img src="images/logo_img.png" alt="logo image">
+                    <h2>Algorithm Army</h2>
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-symbols-outlined">
+                        close
+                    </span>
+                </div>
+            </div>
+            <nav class="sidebar">
+                <a href="dashboard.html">
+                    <span class="material-symbols-outlined">
+                        dashboard
+                    </span>
+                    <h3>Dashboard</h3>
+                </a>
+                <a href="transactions.html" class="active">
+                    <span class="material-symbols-outlined">
+                        receipt_long
+                    </span>
+                    <h3>Transactions</h3>
+                </a>
+                <a href="goals.html">
+                    <span class="material-symbols-outlined">
+                        target
+                    </span>
+                    <h3>Goals</h3>
+                </a>
+                <a href="budget.html">
+                    <span class="material-symbols-outlined">
+                        monitoring
+                    </span>
+                    <h3>Budget</h3>
+                </a>
+                <a href="reports.html">
+                    <span class="material-symbols-outlined">
+                        report
+                    </span>
+                    <h3>Reports</h3>
+                </a>
+                <a href="profile.html">
+                    <span class="material-symbols-outlined">
+                        settings
+                    </span>
+                    <h3>Settings</h3>
+                </a>
+                <a href="index.html">
+                    <span class="material-symbols-outlined">
+                        logout
+                    </span>
+                    <h3>Logout</h3>
+                </a>
+            </nav>
+        </aside>
+        <!-- End of Sidebar Section -->
+
+        <!-- Main Section -->
+        <main>
+            <!-- Navbar  -->
+            <nav class="nav">
+                <button id="menu-btn">
+                    <span class="material-symbols-outlined">
+                        menu
+                    </span>
+                </button>
+                <div class="dark-mode">
+                    <span class="material-symbols-outlined active">
+                        light_mode
+                    </span>
+                    <span class="material-symbols-outlined ">
+                        dark_mode
+                    </span>
+                </div>
+
+                <div class="profile">
+                    <div class="info">
+                        <p>Welcome Back, <b>Farzan</b></p>
+                    </div>
+                    <div class="profile-photo">
+                        <img src="images/profile_img.jpg">
+                    </div>
+                </div>
+            </nav>
+            <!-- End of Navbar -->
+            <h1>Transactions</h1>
+            <div class="recent-orders">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Type</th>
+                            <th>Category</th>
+                            <th>Amount</th>
+                            <th>Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2024-11-28</td>
+                            <td>Expense</td>
+                            <td>Groceries</td>
+                            <td style="color:#b32626;">$75.00</td>
+                            <td>Weekly grocery shopping</td>
+                        </tr>
+                        <tr>
+                            <td>2024-11-27</td>
+                            <td>Expense</td>
+                            <td>Utilities</td>
+                            <td style="color:#b32626;">$50.00</td>
+                            <td>Electricity bill</td>
+                        </tr>
+                        <tr>
+                            <td>2024-11-25</td>
+                            <td>Income</td>
+                            <td>Salary</td>
+                            <td style="color:#256d25;">$2,500.00</td>
+                            <td>Monthly paycheck</td>
+                        </tr>
+                        <tr>
+                            <td>2024-11-25</td>
+                            <td>Expense</td>
+                            <td>Rent</td>
+                            <td style="color:#b32626;">$1,000.00</td>
+                            <td>Monthly rent payment</td>
+                        </tr>
+                        <tr>
+                            <td>2024-11-23</td>
+                            <td>Expense</td>
+                            <td>Entertainment</td>
+                            <td style="color:#b32626;">$20.00</td>
+                            <td>Movie night</td>
+                        </tr>
+                        <tr>
+                            <td>2024-11-21</td>
+                            <td>Income</td>
+                            <td>Freelance</td>
+                            <td style="color:#256d25;">$250.00</td>
+                            <td>Web design project</td>
+                        </tr>
+                        <tr>
+                            <td>2024-11-20</td>
+                            <td>Expense</td>
+                            <td>Dining Out</td>
+                            <td style="color:#b32626;">$30.00</td>
+                            <td>Dinner with friends</td>
+                        </tr>
+                        <tr>
+                            <td>2024-11-19</td>
+                            <td>Expense</td>
+                            <td>Transportation</td>
+                            <td style="color:#b32626;">$15.00</td>
+                            <td>Bus pass</td>
+                        </tr>
+                        <tr>
+                            <td>2024-11-18</td>
+                            <td>Expense</td>
+                            <td>Shopping</td>
+                            <td style="color:#b32626;">$100.00</td>
+                            <td>New clothes</td>
+                        </tr>
+                        <tr>
+                            <td>2024-11-17</td>
+                            <td>Income</td>
+                            <td>Gift</td>
+                            <td style="color:#256d25;">$100.00</td>
+                            <td>Birthday gift from a friend</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="btn">
+                <button class="transactions-btn"> Add Transactions</button>
+                <button class="download-btn" onclick="window.showDirectoryPicker()"> Download </button>
+            </div>  
+            <!-- End of Recent Transactions -->
+        </main>
+    </div>
+<script src="script/script.js"></script>
+</body>
+</html>

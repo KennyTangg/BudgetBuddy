@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <link rel="stylesheet" href="stylesheets/budget.css">
+    <!-- Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+    <title> Personal Finance Tracker - Budget </title>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar Section -->
+        <aside>
+            <div class="toggle">
+                <div class="logo">
+                    <img src="images/logo_img.png" alt="logo image">
+                    <h2>Algorithm Army</h2>
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-symbols-outlined">
+                        close
+                    </span>
+                </div>
+            </div>
+            <nav class="sidebar">
+                <a href="dashboard.html">
+                    <span class="material-symbols-outlined">
+                        dashboard
+                    </span>
+                    <h3>Dashboard</h3>
+                </a>
+                <a href="transactions.html">
+                    <span class="material-symbols-outlined">
+                        receipt_long
+                    </span>
+                    <h3>Transactions</h3>
+                </a>
+                <a href="goals.html">
+                    <span class="material-symbols-outlined">
+                        target
+                    </span>
+                    <h3>Goals</h3>
+                </a>
+                <a href="budget.html" class="active">
+                    <span class="material-symbols-outlined">
+                        monitoring
+                    </span>
+                    <h3>Budget</h3>
+                </a>
+                <a href="reports.html">
+                    <span class="material-symbols-outlined">
+                        report
+                    </span>
+                    <h3>Reports</h3>
+                </a>
+                <a href="profile.html">
+                    <span class="material-symbols-outlined">
+                        settings
+                    </span>
+                    <h3>Settings</h3>
+                </a>
+                <a href="index.html">
+                    <span class="material-symbols-outlined">
+                        logout
+                    </span>
+                    <h3>Logout</h3>
+                </a>
+            </nav>
+        </aside>
+        <!-- End of Sidebar Section -->
+
+        <!-- Main Content -->
+        <main>
+            <!-- Navbar  -->
+            <nav class="nav">
+                <button id="menu-btn">
+                    <span class="material-symbols-outlined">
+                        menu
+                    </span>
+                </button>
+                <div class="dark-mode">
+                    <span class="material-symbols-outlined active">
+                        light_mode
+                    </span>
+                    <span class="material-symbols-outlined ">
+                        dark_mode
+                    </span>
+                </div>
+
+                <div class="profile">
+                    <div class="info">
+                        <p>Welcome Back, <b>Farzan</b></p>
+                    </div>
+                    <div class="profile-photo">
+                        <img src="images/profile_img.jpg">
+                    </div>
+                </div>
+            </nav>
+            <!-- End of Navbar -->
+            <!-- Budget Title Section -->
+            <h1> Budget </h1>
+            <section>
+                <div class="card1">
+                    <h2>Total Budget : <span>$2,000</span></h2>
+                </div>
+                <div class="card2">
+                    <h2>Spent : <span>$1,465</span></h2>
+                </div>
+                <div class="card3">
+                    <h2>Remaining : <span>$535</span></h2>
+                </div>
+            </section>
+            <!-- End of Budget Title Section -->
+            <!-- Chart and Edit budget section -->
+            <div class="chartbox">
+                <canvas id="budget-bar"></canvas>
+            </div>
+            <div class="edit-budget-btn">
+                <button> Edit Budget </button>
+            </div>
+            <!-- End of Chart and Edit budget section -->
+        </main>
+        <!-- End of Main Content -->
+    </div>
+    
+    <!-- Javascript and chart.js -->
+    <script src="script/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script/chart.js"></script>
+</body>
+</html>
