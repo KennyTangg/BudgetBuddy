@@ -1,0 +1,419 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 16px;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.88rem;
+    user-select: none;
+    overflow-x: hidden;
+    color: var(--color-dark);
+    background-color: var(--color-background);
+}
+
+a{
+    color: var(--color-dark);
+}
+
+img{
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+h1{
+    font-weight: 700;
+    font-size: 1.8rem;
+}
+
+h2{
+    font-weight: 500;
+    font-size: 1.4rem;
+}
+
+h3{
+    font-weight: 400;
+    font-size: 0.8rem;
+}
+p{
+    color: var(--color-dark-variant);
+}
+
+b{
+    color: var(--color-dark);
+}
+
+.container{
+    display: grid;
+    width: 95%;
+    margin: 0 auto;
+    gap: 1.8rem;
+    grid-template-columns: 12rem auto;
+}
+aside .sidebar{
+    height: 160vh;
+}
+/* Main Heading Styling */
+main{
+    padding-right: 1.5rem;
+    margin-top: 2rem;
+    .networth{
+        background-color: var(--color-white);
+        box-shadow: var(--box-shadow);
+        padding:1.8rem;
+        border-radius: 2rem;
+        margin: 1rem 0;
+        transition: 300ms ease;
+        h1,h2{
+            padding:1rem 1rem 3rem;
+        }
+        h1{
+            font-size: 7rem;
+        }
+        h2{
+            font-size: 3rem;
+        }
+    }
+    .networth:hover{
+        box-shadow: none;
+    }
+
+}
+/* End of Main Heading Styling */
+
+/* Dashboard Styling */
+main .dashboard{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    > div{
+        background-color: var(--color-white);
+        padding: 1.8rem;
+        border-radius: 2rem;
+        margin-top: 1rem;
+        cursor: pointer;
+        transition: 300ms ease;
+    }
+    > div:hover{
+        transform: scale(1.05);
+    }
+    .income,.expense,.saving{
+        display: flex;
+        justify-content: space-between;
+    }
+    .income{
+        background-color: #d8f5d8;
+        color:#256d25;
+    }
+    .expense{
+        background-color: #f8d8d8;
+        color:#b32626;
+    }
+    .saving{
+        background-color: #d8e9f8;
+        color:#003366;
+    }
+    h1,h3{
+        padding:0.5rem;
+    }
+    h3{
+        font-size: 20px;
+        font-weight: 600;
+    }
+    h1{
+        font-size: 32px;
+        font-weight: 800;
+    }
+}
+/* End of Dashboard Styling */
+
+/* Pie Chart and Bar Chart Styling */
+main .charts{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-top:1.5rem;
+    .chart1,.chart2{
+        background-color: var(--color-white);
+        box-shadow: var(--box-shadow);
+        transition: 300ms ease;
+        padding:1.8rem;
+        border-radius: 2rem;
+        display:flex;
+        flex-direction: column;
+        align-items: center; 
+        text-align: center;
+        h2{
+            margin-bottom: 1rem;
+        }
+        #pie-chart{
+            width:400px !important;
+            height:100% !important;
+        }
+        #bar-chart{
+            width: 700px !important;
+            height:100% !important;
+        }
+    }
+    .chart1:hover,.chart2:hover{
+        box-shadow: none;
+    }
+}
+/* End of Pie Chart and Bar Chart Styling */
+
+/* Recent Transactions Styling */
+main .recent-orders{
+    margin-top: 1.3rem;
+    a {
+        text-align: center;
+        display: block;
+        margin: 1rem auto;
+        color: var(--color-primary);
+        transition: 300ms ease;
+    }
+    a:hover{
+        text-decoration: underline;
+    }
+    h2{
+        margin-bottom: 0.8rem;
+    }
+    table{
+        background-color: var(--color-white);
+        width: 100%;
+        padding: 1.8rem;
+        text-align: center;
+        box-shadow: var(--box-shadow);
+        border-radius: 2rem;
+        transition: all 0.3s ease;
+    }
+    table:hover{
+        box-shadow: none;
+    }
+}
+
+main table tbody td{
+    height: 2.8rem;
+    border-bottom: 1px solid var(--color-light);
+    color: var(--color-dark-variant);
+}
+
+main table tbody tr:last-child td{
+    border: none;
+}
+/* End of Recent Transactions Styling */
+
+/* Media Query for Responsive */
+@media screen and (max-width: 1200px) {
+    .container{
+        width: 95%;
+        grid-template-columns: 7rem auto;
+    }
+    aside .logo h2{
+        display: none;  
+    }
+    aside .sidebar{
+        height:200vh;
+    }
+    aside .sidebar h3{
+        display: none;
+    }
+
+    aside .sidebar a{
+        width: 5.6rem;
+    }
+    aside .sidebar a:last-child{
+        position: relative;
+        margin-top: 1.8rem;
+    }
+    /* main{
+        padding:0;
+    } */
+    main .dashboard{
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    main .charts{
+        grid-template-columns: 1fr;
+        .chart1, .chart2{
+            #pie-chart{
+                width:300px !important;
+                height:auto !important;
+            }
+            #bar-chart{
+                width: 300px !important;
+                height:auto !important;
+            }
+        }
+    }
+
+}
+@media screen and (max-width: 750px) {
+    .container{
+        width: 100%;
+        grid-template-columns: 1fr;
+        padding:0 3rem;
+    }
+
+    aside{
+        position: fixed;
+        background-color: var(--color-white);
+        width: 15rem;
+        z-index: 3;
+        box-shadow: 1rem 3rem 4rem var(--color-light);
+        height: 100vh;
+        left: -100%;
+        display: none;
+        animation: showMenu 0.4s ease forwards;
+    }
+
+    @keyframes showMenu {
+       to{
+        left: 0;
+       } 
+    }
+
+    aside .logo{
+        margin-left: 1rem;
+    }
+
+    aside .logo h2{
+        display: inline;
+    }
+    aside .sidebar{
+        height:85vh;
+    }
+    aside .sidebar h3{
+        display: inline;
+    }
+
+    aside .sidebar a{
+        width: 100%;
+        height: 3.5rem;
+    }
+
+    aside .sidebar a:last-child{
+        position: absolute;
+        bottom: 5rem;
+    }
+
+    aside .toggle .close{
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    main{
+        margin-top: 8rem;
+        padding: 0 1rem;
+        .networth{
+            h2{
+                font-size: 1.5rem;
+                padding:0 1rem 1rem;
+            }
+            h1{
+                font-size: 2.75rem;
+                padding:1rem;
+            }
+        }
+        .nav{
+            position: fixed;
+            top: 0;
+            left: 0;
+            align-items: center;
+            background-color: var(--color-white);
+            padding: 0 1.2rem;
+            height: 4.6rem;
+            width: 100%;
+            z-index: 2;
+            box-shadow: 0 1rem 1rem var(--color-light);
+            margin: 0;
+            .dark-mode{
+                width: 4.4rem;
+                position: absolute;
+                left: 75%;
+            }
+            button{
+                display: inline-block;
+                background-color: transparent;
+                cursor: pointer;
+                color: var(--color-dark);
+                position: absolute;
+                left: 1rem;
+                span{
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+    main .recent-orders{
+        position: relative;
+        margin: 3rem 0 0 0;
+        width: 100%;
+        h2{
+            text-align: center;
+        }
+    }
+
+    main .recent-orders table{
+        width: 83vw;
+    }
+
+    main .recent-orders table{
+        width: 100%;
+        margin: 0;
+        overflow: scroll;
+    }
+    main .charts{
+        grid-template-columns: 1fr;
+        .chart1, .chart2{
+            #pie-chart{
+                width:240px !important;
+                height:auto !important;
+            }
+            #bar-chart{
+                width: 240px !important;
+                height:auto !important;
+            }
+        }
+    }
+    main .profile .info{
+        display: none;
+    }
+}
+@media screen and (max-width: 640px) {
+
+    main table thead tr th:last-child,
+    main table thead tr th:first-child{
+        display: none;
+    }
+
+    main table tbody tr td:last-child,
+    main table tbody tr td:first-child{
+        display: none;
+    }
+}
+@media screen and (max-width: 540px){
+    main .nav .dark-mode{
+        left:65%;
+    }   
+
+}
+@media screen and (max-width: 400px){
+    main .nav .dark-mode{
+        left:55%;
+    }   
+    .container{
+        padding:0 0.2rem;
+    }
+}

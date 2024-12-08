@@ -1,0 +1,287 @@
+main{
+    margin-top: 2rem;
+}
+
+aside .sidebar{
+    height:85vh;
+}
+/* Summary Section */
+.summary{
+    background-color: var(--color-white);
+    box-shadow: var(--box-shadow);
+    padding:1.8rem;
+    border-radius: 2rem;
+    margin: 1rem 0;
+    transition: 300ms ease;
+    display: flex;
+    justify-content: space-around;
+    &:hover{
+        box-shadow: none;
+    }
+    h2,h3,h4{
+        margin-bottom: 10px;
+        font-weight: 700;
+        font-style: italic;
+        transition: 300ms ease;
+    }
+    h2:hover,h3:hover,h4:hover{
+        color:var(--color-primary);
+    }
+    h2{
+        font-size: 18px;
+    }
+    h3{
+        font-size: 16px;
+    }
+    h4{
+        font-size: 14px;
+    }
+}
+/* End of Summary Section */
+
+/* Main Goals Section */
+.goals-section{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    div{
+        background-color: var(--color-white);
+        box-shadow: var(--box-shadow);
+        padding: 1.8rem;
+        border-radius: 2rem;
+        margin-top: 1rem;
+        cursor: pointer;
+        transition: 300ms ease;
+        h1{
+            font-size: 1.2rem;
+            text-align: center;
+            padding:0 0 1rem;
+        }
+        .amount-save{
+            font-size: 0.8rem;
+        }
+        .deadline{
+            font-size:0.7rem;
+            font-style: italic;
+        }
+        button{
+            float: right;
+            font-size: 0.8rem;
+            padding:0.5rem;
+            width:4rem;
+            background-color: transparent;
+            color:var(--color-dark);
+            border:1px solid var(--color-dark);
+            border-radius:0.8rem;
+            transition: 300ms ease;
+        }
+        button:hover{
+            background-color: var(--color-dark);
+            color:var(--color-white);
+        }
+    }
+    div:hover{
+        transform: scale(1.05);
+    }
+}
+
+.goals-section div.box{
+    display: flex;
+    justify-content:space-between ;
+    padding:0;
+    width:100%;
+    box-shadow: none;
+    div.progress{
+        flex-grow: 0.7;
+        padding:0;
+        margin:0 0 1rem;
+        background-color: rgb(223,219,219);
+        border-radius: 50px;
+        display:flex;
+        justify-content: flex-start;
+        align-items:center;
+        position:relative;
+        height:1.5rem;
+        width:50%;
+        -webkit-box-shadow: inset 23px 40px 97px -159px rgba(0,0,0,0.75);
+        -moz-box-shadow: inset 23px 40px 97px -159px rgba(0,0,0,0.75);
+        box-shadow: inset 23px 40px 97px -159px rgba(0,0,0,0.75);
+        & p{
+            color:white;
+            padding-left:0.75rem;
+            font-weight: 700;
+        }
+    }
+    &:hover,& .progress:hover{
+        transform: none;
+    }
+}
+
+/* Animation for completion */
+@keyframes load1{
+    0%{
+        width:0;
+    }
+    100%{
+        width:75%;
+    }
+}
+@keyframes load2{
+    0%{
+        width:0;
+    }
+    100%{
+        width:45%;
+    }
+}
+@keyframes load3{
+    0%{
+        width:0;
+    }
+    100%{
+        width:90%;
+    }
+}
+@keyframes load4{
+    0%{
+        width:0;
+    }
+    100%{
+        width:35%;
+    }
+}
+
+.vacation span{
+    animation: load1 3s normal forwards;
+}
+.emergency span{
+    animation: load2 3s normal forwards;
+}
+.laptop span{
+    animation: load3 3s normal forwards;
+}
+.renovation span{
+    animation: load4 3s normal forwards;
+}
+/* End of Animation for completion */
+
+.vacation span, .emergency span, .laptop span, .renovation span{
+    border-radius: 2rem;
+    background-color: green;
+    height:1.5rem;
+    width:0;
+}
+/* End of Main Goals Section */
+
+/* Add Goals Section */
+.new-goal-btn{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    padding:1rem;
+    button{
+        padding:1rem;
+        margin:1rem;
+        font-weight: 700;
+        font-size: 1rem;
+        border-radius: 0.5rem;
+        color:var(--color-dark);
+        background-color: var(--color-primary);
+        text-shadow: 0 1px 2px var(--color-white);
+        filter: drop-shadow(0 3px 0.5px var(--color-dark));
+    }
+    button:active{
+        filter: none;
+        transform: translateY(2px);
+    }
+}
+/* End of Add Goals Section */
+
+/* Edit Pop Up */
+.hidden{
+    display: none;          
+}
+.blur{
+    filter:blur(5px);                 
+}
+
+.edit{
+    position: fixed;
+    top:22%;
+    left:27%;
+    width:45%;
+    height: auto;
+    border-radius: 1rem;
+    padding:2.5rem;
+    color:var(--color-dark);
+    background-color: var(--color-white);
+    box-shadow: 0 2rem 3rem var(--color-light);
+    h1{
+        text-align: center;
+        padding-bottom:3rem;
+        font-size: 2rem;
+    }
+    label, input{
+        font-weight: 500;
+        font-size: 1rem;
+    }
+    input{
+        padding:0 0.5rem;
+        width:50%;
+        background: transparent;
+    }
+    .buttons{
+        display: flex;
+        justify-content: flex-end;
+        gap:2rem;
+        button{
+            width:5rem;
+            padding:1rem;
+            border-radius: 2rem;
+            font-weight: 700;
+            color:white;
+            &#cancel{
+                background-color: rgb(255, 0, 0);
+            }
+            &#save{
+                background-color: rgb(0, 128, 0);
+            }
+            &#cancel:hover{
+                background-color: rgba(255, 0, 0, 0.7);
+            }
+            &#save:hover{
+                background-color: rgba(0, 128, 0, 0.7);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .goals-section{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+@media screen and (max-width: 975px){
+    .goals-section{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media screen and (max-width: 750px){
+    main{
+        margin-top: 8rem;
+    }
+    .goals-section{
+        grid-template-columns: 1fr;
+    }
+    .edit{
+        width:80%;
+        top:20%;
+        left:8.5%;
+    }
+}
+@media screen and (max-width: 512px){
+    .summary{
+        flex-direction: column;
+        text-align: center;
+    }
+}

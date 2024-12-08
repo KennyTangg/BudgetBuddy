@@ -1,0 +1,90 @@
+main{
+    margin-top: 2rem;
+}
+aside .sidebar{
+    height: 110vh;
+}
+section{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1.5rem;
+    div{
+        background-color: var(--color-white);
+        padding: 1.8rem;
+        border-radius: 2rem;
+        margin-top: 1rem;
+        cursor: pointer;
+        transition: 300ms ease;
+        h2{
+            font-weight: 400;
+        }
+        span{
+            font-size: 1.65rem;
+            font-weight: 700;
+        }
+        &.card2 span{
+            color:#FDD835;
+        }
+        &.card3 span{
+            color:#4CAF50;
+        }
+    }
+    div:hover{
+        transform: scale(1.05);
+    }
+}
+.chartbox{
+    margin: 2rem 0 0;
+    box-shadow: var(--box-shadow);
+    background-color: var(--color-white);
+    padding: 1.8rem;
+    border-radius: 2rem;
+    transition: 300ms ease;
+}
+.chartbox:hover{
+    box-shadow: none;
+}
+canvas{
+    width: 100% !important;
+    height: auto !important;
+}
+
+.edit-budget-btn{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    padding:1rem;
+    button{
+        padding:1rem;
+        margin:1rem;
+        font-weight: 700;
+        font-size: 1rem;
+        border-radius: 0.5rem;
+        color:var(--color-dark);
+        background-color: var(--color-primary);
+        text-shadow: 0 1px 2px var(--color-white);
+        filter: drop-shadow(0 3px 0.5px var(--color-dark));
+    }
+    button:active{
+        filter: none;
+        transform: translateY(2px);
+    }
+}
+
+@media screen and (max-width: 750px){
+    aside .sidebar{
+        height:85%;
+    }
+    main{
+        margin-top: 8rem;
+    }
+}
+
+@media screen and (max-width: 560px){
+    section{
+        grid-template-columns: 1fr;
+    }
+    #budget-bar{
+        padding: 1rem;
+    }
+}
