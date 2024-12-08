@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="stylesheets/dashboard.css">
     <!-- Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
-    <title> Personal Finance Tracker </title>
+    <title> Personal Finance Tracker - Dashboard</title>
 </head>
 <body>
     <div class="container">
@@ -44,19 +44,19 @@
                     </span>
                     <h3>Goals</h3>
                 </a>
-                <a href="#">
+                <a href="budget.html">
                     <span class="material-symbols-outlined">
                         monitoring
                     </span>
                     <h3>Budget</h3>
                 </a>
-                <a href="#">
+                <a href="reports.html">
                     <span class="material-symbols-outlined">
                         report
                     </span>
                     <h3>Reports</h3>
                 </a>
-                <a href="#">
+                <a href="profile.html">
                     <span class="material-symbols-outlined">
                         settings
                     </span>
@@ -72,7 +72,7 @@
         </aside>
         <!-- End of Sidebar Section -->
 
-        <!-- Main Section -->
+        <!-- Main Content -->
         <main>
             <!-- Navbar  -->
             <nav class="nav">
@@ -89,16 +89,16 @@
                         dark_mode
                     </span>
                 </div>
-
                 <div class="profile">
                     <div class="info">
                         <p>Welcome Back, <b>Farzan</b></p>
                     </div>
                     <div class="profile-photo">
-                        <img src="images/profile_img.jpg">
+                        <a href="profile.html">
+                            <img src="images/profile_img.jpg">
+                        </a>    
                     </div>
                 </div>
-
             </nav>
             <!-- End of Navbar -->
             <h1>Dashboard</h1>
@@ -121,7 +121,7 @@
                     <h1>$1,790</h1>
                 </div>
             </div>
-            <!-- End of Analyses -->
+            <!-- End of Dashboard -->
 
             <!-- Pie Chart and Bar Chart Section -->
             <div class="charts">
@@ -133,7 +133,6 @@
                     <h2> Budget Progress </h2>
                     <canvas id="bar-chart"></canvas>
                 </div>
-
             </div>
             <!-- End of Pie Chart and Bar Chart Section -->
 
@@ -184,13 +183,13 @@
                 <a href="transactions.html">Show All</a>
             </div>
             <!-- End of Recent Transactions -->
-
         </main>
         <!-- End of Main Content -->
     </div>
-
-<script src="script/script.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script src="script/chart.js"></script>
+    
+    <!-- Javascript and chart.js -->
+    <script src="script/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script/chart.js"></script>
 </body>
 </html>

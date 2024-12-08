@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <link rel="stylesheet" href="stylesheets/reports.css">
+    <!-- Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+    <title> Personal Finance Tracker - Reports</title>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar Section -->
+        <aside>
+            <div class="toggle">
+                <div class="logo">
+                    <img src="images/logo_img.png" alt="logo image">
+                    <h2>Algorithm Army</h2>
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-symbols-outlined">
+                        close
+                    </span>
+                </div>
+            </div>
+            <nav class="sidebar">
+                <a href="dashboard.html">
+                    <span class="material-symbols-outlined">
+                        dashboard
+                    </span>
+                    <h3>Dashboard</h3>
+                </a>
+                <a href="transactions.html">
+                    <span class="material-symbols-outlined">
+                        receipt_long
+                    </span>
+                    <h3>Transactions</h3>
+                </a>
+                <a href="goals.html">
+                    <span class="material-symbols-outlined">
+                        target
+                    </span>
+                    <h3>Goals</h3>
+                </a>
+                <a href="budget.html">
+                    <span class="material-symbols-outlined">
+                        monitoring
+                    </span>
+                    <h3>Budget</h3>
+                </a>
+                <a href="reports.html" class="active">
+                    <span class="material-symbols-outlined">
+                        report
+                    </span>
+                    <h3>Reports</h3>
+                </a>
+                <a href="profile.html">
+                    <span class="material-symbols-outlined">
+                        settings
+                    </span>
+                    <h3>Settings</h3>
+                </a>
+                <a href="index.html">
+                    <span class="material-symbols-outlined">
+                        logout
+                    </span>
+                    <h3>Logout</h3>
+                </a>
+            </nav>
+        </aside>
+        <!-- End of Sidebar Section -->
+
+        <!-- Main Section -->
+        <main>
+            <!-- Navbar  -->
+            <nav class="nav">
+                <button id="menu-btn">
+                    <span class="material-symbols-outlined">
+                        menu
+                    </span>
+                </button>
+                <div class="dark-mode">
+                    <span class="material-symbols-outlined active">
+                        light_mode
+                    </span>
+                    <span class="material-symbols-outlined ">
+                        dark_mode
+                    </span>
+                </div>
+                <div class="profile">
+                    <div class="info">
+                        <p>Welcome Back, <b>Farzan</b></p>
+                    </div>
+                    <div class="profile-photo">
+                        <img src="images/profile_img.jpg">
+                    </div>
+                </div>
+            </nav>
+            <!-- End of Navbar -->
+             
+             <!-- Title Section -->
+            <h1> Reports </h1>
+            <section class="title">
+                <div style="display: flex;justify-content: center;align-items: center;">
+                    <div class="insights">
+                        <div>
+                            <h1>Insights</h1>
+                            <span class="material-symbols-outlined">lightbulb</span>
+                        </div>
+                        <ul>
+                            <li>Your entertainment expenses increased by <span style="color:#b32626;">15%</span> this month compared to last month.</li>
+                            <li>Your transportation costs dropped by <span style="color:#256d25;">30%</span> compared to last month.</li>
+                            <li>Rent remains the largest expense, comprising <span style="color:#b32626;">77%</span> of your monthly budget.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="metrics">
+                    <div class="income">
+                        <h3> Total Income </h3>
+                        <h1> $3,570 </h1>
+                    </div>
+                    <div class="expense">
+                        <h3>Total Expense</h3>
+                        <h1>$1,780</h1>
+                    </div>
+                    <div class="saving">
+                        <h3>Net Savings</h3>
+                        <h1>$1,790</h1>
+                    </div>
+                </div>
+            </section>
+            <!-- End of Title Section -->
+
+            <!-- Charts Section -->
+            <section class="charts">
+                <div class="chart1">
+                    <h2>Income vs Expenses</h2>
+                    <canvas id="bar-chart2" width="600" height="500"></canvas>
+                </div>
+                <div class="chart2">
+                    <h2>Spending Breakdown by Category</h2>
+                    <canvas id="pie-chart2"width="500" height="400"></canvas>
+                </div>
+            </section>
+            <!-- End of Charts Section -->
+        </main>
+    </div>
+    <!-- Javascript and chart.js -->
+    <script src="script/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script/chart.js"></script>
+</body>
+</html>

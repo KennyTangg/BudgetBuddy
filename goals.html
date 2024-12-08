@@ -6,98 +6,206 @@
     <!-- CSS -->
     <link rel="stylesheet" href="stylesheets/style.css">
     <link rel="stylesheet" href="stylesheets/goals.css">
-    <title> Personal Finance Tracker </title>
+    <!-- Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+    <title> Personal Finance Tracker - Goals </title>
 </head>
 <body>
-    <nav id="sidebar">
-        <ul>
-            <li>
-                <span class="logo"> Algorithm Army </span>
-                <button onclick=toggleSidebar() id="toggle-btn" >
-                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M560-240 320-480l240-240 56 56-184 184 184 184-56 56Z"/></svg>
-                </button>
-            </li>
-            <li>
-                <a href="index.html">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z"/></svg>
-                    <span> Home </span>
+    <div class="container">
+        <!-- Sidebar Section -->
+        <aside>
+            <div class="toggle">
+                <div class="logo">
+                    <img src="images/logo_img.png" alt="logo image">
+                    <h2>Algorithm Army</h2>
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-symbols-outlined">
+                        close
+                    </span>
+                </div>
+            </div>
+            <nav class="sidebar">
+                <a href="dashboard.html">
+                    <span class="material-symbols-outlined">
+                        dashboard
+                    </span>
+                    <h3>Dashboard</h3>
                 </a>
-            </li>
-            <li>
-               <button onclick=toggleSubmenu(this) class="dropdown-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M880-720v480q0 33-23.5 56.5T800-160H160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720Zm-720 80h640v-80H160v80Zm0 160v240h640v-240H160Zm0 240v-480 480Z"/></svg>
-                    <span> Transactions </span>
-                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
-               </button>
-               <ul class="sub-menu ">
-                    <div>
-                        <li><a href="transactions.html"> Add Income </a></li>
-                        <li><a href="#"> View History </a></li>
-                    </div>
-               </ul>
-            </li>
-            <li>
+                <a href="transactions.html">
+                    <span class="material-symbols-outlined">
+                        receipt_long
+                    </span>
+                    <h3>Transactions</h3>
+                </a>
+                <a href="goals.html" class="active">
+                    <span class="material-symbols-outlined">
+                        target
+                    </span>
+                    <h3>Goals</h3>
+                </a>
                 <a href="budget.html">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m140-220-60-60 300-300 160 160 284-320 56 56-340 384-160-160-240 240Z"/></svg>
-                    <span> Budgets </span>
+                    <span class="material-symbols-outlined">
+                        monitoring
+                    </span>
+                    <h3>Budget</h3>
                 </a>
-            </li>
-            <li class="active">
-                <a href="goals.html">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-80q-100 0-170-70t-70-170q0-100 70-170t170-70q100 0 170 70t70 170q0 100-70 170t-170 70Zm0-80q66 0 113-47t47-113q0-66-47-113t-113-47q-66 0-113 47t-47 113q0 66 47 113t113 47Zm0-80q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Z"/></svg>
-                    <span> Goals </span>
-                </a>
-            </li>
-            <li>
                 <a href="reports.html">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M640-160v-280h160v280H640Zm-240 0v-640h160v640H400Zm-240 0v-440h160v440H160Z"/></svg>
-                    <span> Reports </span>
+                    <span class="material-symbols-outlined">
+                        report
+                    </span>
+                    <h3>Reports</h3>
                 </a>
-            </li>
-            <li>
-                <button onclick=toggleSubmenu(this) class="dropdown-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m370-80-16-128q-13-5-24.5-12T307-235l-119 50L78-375l103-78q-1-7-1-13.5v-27q0-6.5 1-13.5L78-585l110-190 119 50q11-8 23-15t24-12l16-128h220l16 128q13 5 24.5 12t22.5 15l119-50 110 190-103 78q1 7 1 13.5v27q0 6.5-2 13.5l103 78-110 190-118-50q-11 8-23 15t-24 12L590-80H370Zm70-80h79l14-106q31-8 57.5-23.5T639-327l99 41 39-68-86-65q5-14 7-29.5t2-31.5q0-16-2-31.5t-7-29.5l86-65-39-68-99 42q-22-23-48.5-38.5T533-694l-13-106h-79l-14 106q-31 8-57.5 23.5T321-633l-99-41-39 68 86 64q-5 15-7 30t-2 32q0 16 2 31t7 30l-86 65 39 68 99-42q22 23 48.5 38.5T427-266l13 106Zm42-180q58 0 99-41t41-99q0-58-41-99t-99-41q-59 0-99.5 41T342-480q0 58 40.5 99t99.5 41Zm-2-140Z"/></svg>
-                    <span> Settings </span>
-                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
-                </button>
-                <ul class="sub-menu">
-                    <div>
-                        <li><a href="#"> Light mode </a></li>
-                        <li><a href="#"> Security </a></li>
-                    </div>
-                </ul>
-             </li>
-             <li>
-                 <a href="profile.html">
-                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Zm80-80h480v-32q0-11-5.5-20T700-306q-54-27-109-40.5T480-360q-56 0-111 13.5T260-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T560-640q0-33-23.5-56.5T480-720q-33 0-56.5 23.5T400-640q0 33 23.5 56.5T480-560Zm0-80Zm0 400Z"/></svg>
-                     <span> Profile </span>
-                 </a>
-             </li>
-        </ul>
-    </nav>
-    <main>
-        <h1>Saving Goals</h1>
-        <section class="current-month">
-            <nav class="table">
-                <table>
-                    <tr>
-                      <th>Company</th>
-                      <th>Contact</th>
-                      <th>Country</th>
-                    </tr>
-                    <tr>
-                      <td>Alfreds Futterkiste</td>
-                      <td>Maria Anders</td>
-                      <td>Germany</td>
-                    </tr>
-                    <tr>
-                      <td>Centro comercial Moctezuma</td>
-                      <td>Francisco Chang</td>
-                      <td>Mexico</td>
-                    </tr>
-                </table>
+                <a href="profile.html">
+                    <span class="material-symbols-outlined">
+                        settings
+                    </span>
+                    <h3>Settings</h3>
+                </a>
+                <a href="index.html">
+                    <span class="material-symbols-outlined">
+                        logout
+                    </span>
+                    <h3>Logout</h3>
+                </a>
             </nav>
-        </section>
-    </main>
+        </aside>
+        <!-- End of Sidebar Section -->
+
+        <!-- Main Content -->
+        <main>
+            <!-- Navbar  -->
+            <nav class="nav">
+                <button id="menu-btn">
+                    <span class="material-symbols-outlined">
+                        menu
+                    </span>
+                </button>
+                <div class="dark-mode">
+                    <span class="material-symbols-outlined active">
+                        light_mode
+                    </span>
+                    <span class="material-symbols-outlined ">
+                        dark_mode
+                    </span>
+                </div>
+
+                <div class="profile">
+                    <div class="info">
+                        <p>Welcome Back, <b>Farzan</b></p>
+                    </div>
+                    <div class="profile-photo">
+                        <img src="images/profile_img.jpg">
+                    </div>
+                </div>
+            </nav>
+            <!-- End of Navbar -->
+            
+            <!-- Title Section -->
+            <h1> Goals </h1>
+            <div class="summary">
+                <h2>4 Active Goals</h2>
+                <h3>1 Goal Completed</h3>
+                <h4>75% Average Progress</h4>
+            </div>
+            <!-- Main Section -->
+            <div>
+                <h2>Goals Section</h2>
+                <div class="goals-section">
+                    <div class="vacation">
+                        <h1>Save for Vacation</h1>
+                        <div class="box">
+                            <div class="progress">
+                                <span>
+                                    <p>75%</p>
+                                </span>
+                            </div>
+                            <b>Complete</b>
+                        </div>
+                        <p class="amount-save">$1,500 of $2,000 saved</p>
+                        <p class="deadline">By Dec 2024</p>
+                        <button onclick="popup()">Edit</button>
+                    </div>
+                    <div class="emergency">
+                        <h1>Emergency Fund</h1>
+                        <div class="box">
+                            <div class="progress">
+                                <span>
+                                    <p>40%</p>
+                                </span>
+                            </div>
+                            <b>Complete</b>
+                        </div>
+                        <p class="amount-save">$4,000 of $10,000 saved</p>
+                        <p class="deadline">By June 2025</p>
+                        <button onclick="popup()">Edit</button>
+                    </div>
+                    <div class="laptop">
+                        <h1>Buy a New Laptop</h1>
+                        <div class="box">
+                            <div class="progress">
+                                <span>
+                                    <p>90%</p>
+                                </span>
+                            </div>
+                            <b>Complete</b>
+                        </div>
+                        <p class="amount-save">$900 of $1,000 saved</p>
+                        <p class="deadline">By Jan 2024</p>
+                        <button onclick="popup()">Edit</button>
+                    </div>
+                    <div class="renovation">
+                        <h1>Save Home Renovation</h1>
+                        <div class="box">
+                            <div class="progress">
+                                <span>
+                                    <p>25%</p>
+                                </span>
+                            </div>
+                            <b>Complete</b>
+                        </div>
+                        <p class="amount-save">$2,500 of $10,000 saved</p>
+                        <p class="deadline">By Dec 2026</p>
+                        <button onclick="popup()">Edit</button>
+                    </div>
+                </div>
+            </div>
+            <!-- End of Main section -->
+
+            <!-- Add new goal button -->
+            <div class="new-goal-btn">
+                <button> Add New Goal </button>
+            </div>
+            <!-- End of Add new goal button -->
+        </main>
+        <!-- End of Main Content -->
+    </div>
+    <!-- Pop ups -->
+    <section class="edit hidden">
+        <h1>Edit Goals</h1>
+        <label for="title">Title :</label>
+        <input type="text" name="title" placeholder="Title"><br><br>
+
+        <label for="progress">Progress :</label>
+        <input type="number" name="progress" placeholder="50" min="0" max="100" ><br><br>
+
+        <label for="amountSaved">Amount Saved :</label>
+        <input type="number" name="amountSaved" placeholder="0"><br><br>
+
+        <label for="totalGoal">Total Goal Amount :</label>
+        <input type="number" name="totalGoal" placeholder="100"><br><br>
+
+        <label for="deadline">Deadline :</label>
+        <input type="month" name="deadline"><br><br>
+
+        <div class="buttons">
+            <button id="cancel" onclick="closepop()">Cancel</button>
+            <button type="submit" id="save" onclick="closepop()">Save</button>
+        </div>
+    </section>
+    <!-- End of Pop ups -->
+     
+    <!-- Javascript -->
     <script src="script/script.js"></script>
 </body>
+</html>
