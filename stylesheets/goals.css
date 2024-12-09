@@ -267,6 +267,9 @@ aside .sidebar{
     }
 }
 @media screen and (max-width: 750px){
+    aside .sidebar{
+        height:95%;
+    }
     main{
         margin-top: 8rem;
     }
@@ -283,5 +286,11 @@ aside .sidebar{
     .summary{
         flex-direction: column;
         text-align: center;
+    }
+    .edit h1{
+        font-size: 1.5rem;
+    }
+    .edit label, .edit input{
+        font-size: 0.65rem;
     }
 }

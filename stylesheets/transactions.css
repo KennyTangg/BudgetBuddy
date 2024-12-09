@@ -49,7 +49,7 @@ main table tbody tr:last-child td{
 main .btn{
     display: flex;
     justify-content: flex-end;
-    button{
+    .transactions-btn{
         padding:1rem;
         margin:1rem;
         font-weight: 700;
@@ -57,20 +57,97 @@ main .btn{
         border-radius: 0.5rem;
         color:var(--color-dark);
         background-color: var(--color-primary);
-        text-shadow: 0 1px 2px var(--color-white);
         filter: drop-shadow(0 3px 0.5px var(--color-dark));
+        cursor: pointer;
     }
-    button:active{
+    .transactions-btn:active{
         filter: none;
         transform: translateY(2px);
     }
-    #download{
-        display: none;
+    .download-btn{
+        background-color: none;
+        padding:1rem;
+        margin:1rem;
+        border: 3px solid black;
+        border-radius: 0.5rem;
+        font-weight: 700;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: 300ms ease;
+    }
+    .download-btn:hover{
+        background-color: rgba(0,0,0,0.1);
+    }
+}
+/* Pop up */
+.hidden{
+    display: none;          
+}
+.blur{
+    filter:blur(5px);                 
+}
+
+.edit{
+    position: fixed;
+    top:22%;
+    left:27%;
+    width:45%;
+    height: auto;
+    border-radius: 1rem;
+    padding:2.5rem;
+    color:var(--color-dark);
+    background-color: var(--color-white);
+    box-shadow: 0 2rem 3rem var(--color-light);
+    h1{
+        text-align: center;
+        padding-bottom:3rem;
+        font-size: 2rem;
+    }
+    label, input{
+        font-weight: 500;
+        font-size: 1rem;
+    }
+    input{
+        padding:0 0.5rem;
+        width:50%;
+        background: transparent;
+    }
+    .buttons{
+        display: flex;
+        justify-content: flex-end;
+        gap:2rem;
+        button{
+            width:5rem;
+            padding:1rem;
+            border-radius: 2rem;
+            font-weight: 700;
+            color:white;
+            &#cancel{
+                background-color: rgb(255, 0, 0);
+            }
+            &#save{
+                background-color: rgb(0, 128, 0);
+            }
+            &#cancel:hover{
+                background-color: rgba(255, 0, 0, 0.7);
+            }
+            &#save:hover{
+                background-color: rgba(0, 128, 0, 0.7);
+            }
+        }
     }
 }
 @media screen and (max-width: 750px){
+    aside .sidebar{
+        height:95%;
+    }
     main{
         margin-top: 8rem;
+    }
+    .edit{
+        width:80%;
+        top:20%;
+        left:8.5%;
     }
 }
 @media screen and (max-width: 610px){
@@ -98,6 +175,12 @@ main .btn{
         button{
             font-size: 1.2rem;
         }
+    }
+    .edit h1{
+        font-size: 1.5rem;
+    }
+    .edit label, .edit input{
+        font-size: 0.65rem;
     }
 }
 @media screen and (max-width: 300px){

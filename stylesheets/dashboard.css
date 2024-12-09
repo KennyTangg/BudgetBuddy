@@ -292,7 +292,7 @@ main table tbody tr:last-child td{
         display: inline;
     }
     aside .sidebar{
-        height:85vh;
+        height:95%;
     }
     aside .sidebar h3{
         display: inline;

@@ -10,6 +10,34 @@ body {
     object-position: center;
 }
 
+.heading{
+    font-size: 2rem;
+}
+
+.borders{
+    border:2px solid black !important;
+    border-radius: 1rem !important;
+    padding: 1rem !important;
+    box-shadow: 0 2rem 3rem rgba(24, 28, 33, 0.07) !important;
+    transition: 300ms ease;
+}
+
+.borders:hover{
+    box-shadow: none !important;
+}
+
+.btn-font, .btn-font2{
+    font-weight: 600 !important;
+}
+
+.btn-font{
+    border: 2px solid #ffc107 !important;
+}
+
+.btn-font2{
+    border: 2px solid black !important;
+}
+
 .btn-default {
     border-color: rgba(24, 28, 33, 0.1);
     background  : rgba(0, 0, 0, 0);
