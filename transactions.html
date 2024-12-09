@@ -95,11 +95,14 @@
                         <p>Welcome Back, <b>Farzan</b></p>
                     </div>
                     <div class="profile-photo">
-                        <img src="images/profile_img.jpg">
+                        <a href="profile.html">
+                            <img src="images/profile_img.jpg">
+                        </a>    
                     </div>
                 </div>
             </nav>
             <!-- End of Navbar -->
+            <!-- Transactions table -->
             <h1>Transactions</h1>
             <div class="recent-orders">
                 <table>
@@ -187,12 +190,52 @@
                 </table>
             </div>
             <div class="btn">
-                <button class="transactions-btn"> Add Transactions</button>
+                <button class="transactions-btn" onclick="popup()"> Edit Transactions</button>
+                <button class="transactions-btn" onclick="popup2()"> Add Transactions</button>
                 <button class="download-btn" onclick="window.showDirectoryPicker()"> Download </button>
             </div>  
-            <!-- End of Recent Transactions -->
+            <!-- End of Transactions table -->
         </main>
     </div>
+    <!-- Pop up for Edit and Add Transactions -->
+    <section class="edit hidden">
+        <form>
+            <h1 id="heading">Edit Transactions</h1>
+            <label for="date"> Date :</label>
+            <input type="date" name="date"><br><br>
+
+            <label for="type"> Type :</label>
+            <select name="type">
+                <option disabled selected> Select a Type </option>
+                <option> Income </option>
+                <option> Expense </option>
+            </select><br><br>
+
+            <label for="category"> Category :</label>
+            <select name="category">
+                <option disabled selected> Select a Category </option>
+                <option> Rent </option>
+                <option> Groceries </option>
+                <option> Shopping </option>
+                <option> Utilities </option>
+                <option> Dining Out </option>
+                <option> Entertainment </option>
+                <option> Transportation </option>
+            </select><br><br>
+
+            <label for="amount"> Amount :</label>
+            <input type="number" name="amount" placeholder="$ 100"><br><br>
+
+            <label for="notes"> Notes :</label>
+            <input type="text" name="notes" placeholder="Notes"><br><br>
+        </form>
+        <div class="buttons">
+            <button id="cancel" onclick="closepop()">Cancel</button>
+            <button type="submit" id="save" onclick="closepop()">Save</button>
+        </div>
+    </section>
+    <!-- End of Pop up for Edit and Add Transactions -->
+<!-- Javascript -->
 <script src="script/script.js"></script>
 </body>
 </html>

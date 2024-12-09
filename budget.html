@@ -95,14 +95,17 @@
                         <p>Welcome Back, <b>Farzan</b></p>
                     </div>
                     <div class="profile-photo">
-                        <img src="images/profile_img.jpg">
+                        <a href="profile.html">
+                            <img src="images/profile_img.jpg">
+                        </a>    
                     </div>
                 </div>
             </nav>
             <!-- End of Navbar -->
+
             <!-- Budget Title Section -->
             <h1> Budget </h1>
-            <section>
+            <section class="cards">
                 <div class="card1">
                     <h2>Total Budget : <span>$2,000</span></h2>
                 </div>
@@ -114,18 +117,48 @@
                 </div>
             </section>
             <!-- End of Budget Title Section -->
+
             <!-- Chart and Edit budget section -->
             <div class="chartbox">
                 <canvas id="budget-bar"></canvas>
             </div>
             <div class="edit-budget-btn">
-                <button> Edit Budget </button>
+                <button onclick="popup()"> Edit Budget </button>
             </div>
             <!-- End of Chart and Edit budget section -->
         </main>
         <!-- End of Main Content -->
     </div>
-    
+
+    <!-- Pop up for Edit Budget -->
+    <section class="edit hidden">
+        <form>
+            <h1>Edit Budget</h1>
+            <label for="category"> Category :</label>
+            <select name="category">
+                <option disabled selected> Select a Category </option>
+                <option> Rent </option>
+                <option> Groceries </option>
+                <option> Shopping </option>
+                <option> Utilities </option>
+                <option> Dining Out </option>
+                <option> Entertainment </option>
+                <option> Transportation </option>
+            </select><br><br>
+
+            <label for="spent">Spent Amount :</label>
+            <input type="number" name="spent" placeholder="$ 0"><br><br>
+
+            <label for="remain">Remaining Budget :</label>
+            <input type="number" name="remain" placeholder="$ 0"><br><br>
+        </form>
+        <div class="buttons">
+            <button id="cancel" onclick="closepop()">Cancel</button>
+            <button type="submit" id="save" onclick="closepop()">Save</button>
+        </div>
+    </section>
+    <!-- End of Pop up for Edit Budget -->
+
     <!-- Javascript and chart.js -->
     <script src="script/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
