@@ -28,12 +28,35 @@ closeBtn.addEventListener('click', () => {
 // Pop up Screen 
 const container = document.getElementsByClassName("container")[0];
 const edit = document.getElementsByClassName("edit")[0];
+const transactionsHead = document.getElementById("heading");
+const goalsHead = document.getElementById("heading2");
 
-function popup(){
+function popup() {
     container.classList.add("blur");
     edit.classList.remove("hidden");
+
+    if (transactionsHead) {
+        transactionsHead.innerHTML = "Edit Transactions";
+    }
+    if (goalsHead) {
+        goalsHead.innerHTML = "Edit Goals";
+    }
 }
-function closepop(){
+
+function popup2() {
+    container.classList.add("blur");
+    edit.classList.remove("hidden");
+
+    if (transactionsHead) {
+        transactionsHead.innerHTML = "Add Transactions";
+    }
+    if (goalsHead) {
+        goalsHead.innerHTML = "Add New Goal";
+    }
+}
+
+function closepop() {
     container.classList.toggle("blur");
     edit.classList.toggle("hidden");
+    document.querySelector("form").reset();
 }

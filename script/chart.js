@@ -82,14 +82,6 @@ if (budgetchart) {
       responsive: true,
       aspectRatio: 2,
       indexAxis: 'y',
-      // scales: {
-      //   x: {
-      //     stacked: true,
-      //   },
-      //   y: {
-      //     stacked: true,  
-      //   }
-      // },
       plugins: {
         legend: {
           position: 'top',
