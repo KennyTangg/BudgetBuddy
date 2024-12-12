@@ -221,7 +221,27 @@ main .dark-mode{
 /* End of Navigation Bar Styling */
 
 /* Animations */
-@keyframes appear{
+@keyframes appear1{
+    from{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+@keyframes appear2{
+    from{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+@keyframes appear3{
     from{
         opacity: 0;
         scale:0.5;
@@ -231,10 +251,20 @@ main .dark-mode{
         scale:1;
     }
 }
-.about-us, .features{
-    animation: appear linear;
+#about1{
+    animation: appear1 linear;
     animation-timeline: view();
-    animation-range:entry 0% cover 30%;
+    animation-range:entry 0% cover 40%;
+}   
+#about2{
+    animation: appear2 linear;
+    animation-timeline: view();
+    animation-range:entry 0% cover 40%;
+}   
+.features{
+    animation: appear3 linear;
+    animation-timeline: view();
+    animation-range:entry 0% cover 20%;
 }   
 /* End of Animations */
 
@@ -315,17 +345,21 @@ main .dark-mode{
     div{
         display: flex;
         flex-direction: column;
-        font-size: 35px;
+        h1{
+            font-size: 40px;
+            padding: 0;
+        }
         h2{
             padding-top:min(2em,5%);
             padding-bottom:min(0.5em,5%);
             font-size: 30px;
-            font-weight: 200;
+            font-weight: 300;
         }
         p{
             padding-top:min(1em,5%);
-            font-size: 25px;
+            font-size: 28px;
             font-weight: 400;
+            color:hsl(0,0%,90%);
         }
         button{
             margin-top: 5rem;
@@ -385,7 +419,8 @@ main .dark-mode{
 
 /* Features Section */
 .features{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
     color:black;
     padding:1rem;
     div{
@@ -396,8 +431,9 @@ main .dark-mode{
         transition: 300ms ease-in-out;
         h1{
             margin-bottom: 1rem;
-            font-weight: 500;
-            font-size: 1.7rem;
+            font-weight: 600;
+            font-size: 1.4rem;
+            text-align: center;
             padding: 0;
         }
         #feature{
@@ -422,7 +458,7 @@ main .dark-mode{
         }
     }
     div p{
-        font-size: 0.8rem;
+        font-size: 1rem;
     }
 
 }
@@ -481,7 +517,7 @@ main .dark-mode{
         }
     }
     .features{
-        flex-direction: column;
+        grid-template-columns: repeat(2,1fr);
     }
 }
 @media screen and (max-width: 750px){
@@ -604,7 +640,7 @@ main .dark-mode{
             flex-grow: 0 !important;
         }
         .btn{
-            display: none !important;
+            display: none;
         }
     }
     .hero{
@@ -635,5 +671,7 @@ main .dark-mode{
     main .nav .dark-mode{
         left:55%;
     }
-    
+    .features{
+        grid-template-columns: 1fr;
+    }
 }
