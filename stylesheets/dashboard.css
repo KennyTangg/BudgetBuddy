@@ -158,11 +158,11 @@ main .charts{
             margin-bottom: 1rem;
         }
         #pie-chart{
-            width:400px !important;
+            width:300px !important;
             height:100% !important;
         }
         #bar-chart{
-            width: 700px !important;
+            width: 500px !important;
             height:100% !important;
         }
     }
