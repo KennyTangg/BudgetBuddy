@@ -490,6 +490,10 @@ main .dark-mode{
         display: none;  
     }
 
+    aside .logo img{
+        margin-left: 1.7rem;  
+    }
+
     aside .sidebar h3{
         display: none;
     }
