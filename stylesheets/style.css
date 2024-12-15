@@ -264,7 +264,7 @@ main .dark-mode{
 .features{
     animation: appear3 linear;
     animation-timeline: view();
-    animation-range:entry 0% cover 20%;
+    animation-range:entry 0% cover 40%;
 }   
 /* End of Animations */
 
@@ -337,7 +337,7 @@ main .dark-mode{
     background-position: center;
     background-attachment: fixed;
     background-position: center;
-    min-height:750px;
+    min-height:850px;
     padding:15% 10%;
     color:#fff;
     display: flex;
@@ -475,7 +475,7 @@ main .dark-mode{
     background-color: var(--hover-color);
     color:var(--color-dark-variant);
     padding:1rem;
-    margin-top:1rem;
+    margin-top:5rem;
     text-align: center;
 }
 /* End of Footer Section */
@@ -489,7 +489,7 @@ main .dark-mode{
     aside .logo h2{
         display: none;  
     }
-
+    
     aside .logo img{
         margin-left: 1.7rem;  
     }
