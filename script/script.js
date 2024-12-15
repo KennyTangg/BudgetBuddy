@@ -5,6 +5,7 @@ const closeBtn = document.getElementById('close-btn');
 const darkMode = document.querySelector('.dark-mode');
 
 // Toggle dark mode
+if (darkMode){
 darkMode.addEventListener('click', () => {
   const isDarkMode = document.body.classList.toggle('dark-mode-variables');
 
@@ -15,6 +16,7 @@ darkMode.addEventListener('click', () => {
   darkMode.querySelector('span:nth-child(1)').classList.toggle('active');
   darkMode.querySelector('span:nth-child(2)').classList.toggle('active');
 });
+}
 
 // Toggle the side menu visibility
 menuBtn.addEventListener('click', () => {
